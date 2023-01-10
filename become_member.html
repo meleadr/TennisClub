@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TennisClub</title>
+	<!--Link de mes icons-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!--Link de mon CSS-->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!--Link de mon favicon-->
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+	<!--Script pour ma navbar-->
+	<script src="assets/js/script.js"></script>
+</head>
+<body>
+	<!--Header contenant la navbar et le titre-->
+	<header>
+		<div class="logo">
+			<h1 class="logo-text"><a href="index.html#home"><span>Tennis</span>Club</a></h1>
+		</div>
+		<i class="fa fa-bars menu-toggle" onclick="toggleMenu();"></i>
+		<ul class="nav active">
+			<li><a href="index.html#home" class="nav-link"><i class="fas fa-home"></i> Accueil</a></li>
+			<li><a href="index.html#about" class="nav-link"><i class="fas fa-info"></i> A propos</a></li>
+			<li><a href="index.html#services" class="nav-link"><i class="fas fa-check"></i> Services</a></li>
+			<li><a href="index.html#contact" class="nav-link"><i class="fas fa-phone"></i> Contact</a></li>
+		</ul>
+	</header>
+	<!--Section contenant le formulaire pour devenir membre-->
+	<section id="become_member">
+		<div class="container">
+			<div class="title">
+				<h2>Devenir membre</h2>
+			</div>
+			<div class="content_form">
+				<div class="form">
+					<form action="https://www.w3schools.com/action_page.php" method="post">
+						<div class="form-group">
+							<label for="name">Nom</label>
+							<input type="text" name="name" id="name" class="text-input" placeholder="Nom" required>
+						</div>
+						<div class="form-group">
+							<label for="surname">Prénom</label>
+							<input type="text" name="surname" id="surname" class="text-input" placeholder="Prénom" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" class="text-input" placeholder="Email" required>
+						</div>
+						<div class="form-group">
+							<label for="phone">Téléphone</label>
+							<input type="tel" name="phone" id="phone" class="text-input" placeholder="Téléphone" required>
+						</div>
+						<div class="form-group">
+							<label for="birth">Date de naissance</label>
+							<input type="date" name="birth" id="birth" class="text-input" placeholder="Date de naissance" required>
+						</div>
+						<div class="form-group">
+							<label for="gender">Genre</label>
+							<select name="gener" id="gender" required>
+								<option value="" disabled selected>Genre</option>
+								<option value="homme">Homme</option>
+								<option value="femme">Femme</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="level">Niveau</label>
+							<div class="radio-input">
+								<input type="radio" name="level" id="level" value="débutant" checked>
+								<label for="level">Débutant</label>
+							</div>
+							<div class="radio-input">
+								<input type="radio" name="level" id="level" value="intermédiaire">
+								<label for="level">Intermédiaire</label>
+							</div>
+							<div class="radio-input">
+								<input type="radio" name="level" id="level" value="avancé">
+								<label for="level">Avancé</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="type">Type de cotisation</label>
+							<select name="type" id="type">
+								<option value="" disabled selected>Type de cotisation</option>
+								<option value="abonnement_1">Abonnement de 9h00 à 16h00 en semaine : 245,00 € pour 1h/semaine</option>
+								<option value="abonnement_2">Abonnement en soirée de 16h00 à 21h30 en semaine : 525,00 € pour 1h/semaine</option>
+								<option value="abonnement_3">Abonnement en soirée à partir de 21h30 en semaine : 345,00 € pour 1h/semaine</option>
+								<option value="abonnement_4">Abonnement les Samedi et Dimanche : 245,00 € pour 1h/semaine</option>
+							</select>
+						</div>
+						<!-- nb heures/ semaine-->
+						<div class="form-group">
+							<label for="nb_hours">Nombre d'heures par semaine</label>
+							<input type="number" name="nb_hours" id="nb_hours" class="text-input" placeholder="Nombre d'heures par semaine" min="1" max="6" value="1" required>
+						</div>
+						<div class="form-group">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" class="text-input" placeholder="Message"></textarea>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn">Envoyer</button>
+						</div>
+					</form>
+				</div>
+			</div>
+	</section>
+	<!--Section contenant la grille tarifaire-->
+	<section id="tarif">
+		<div>
+			<h2>Grille tarifaire</h2>
+			<table>
+				<tr>
+					<th>Type de cotisation</th>
+					<th>Abonnement de 9h00 à 16h00 en semaine</th>
+					<th>Abonnement en soirée de 16h00 à 21h30 en semaine</th>
+					<th>Abonnement en soirée à partir de 21h30 en semaine</th>
+					<th>Abonnement les Samedi et Dimanche</th>
+				</tr>
+				<tr>
+					<td>1h/semaine</td>
+					<td>245,00 €</td>
+					<td>525,00 €</td>
+					<td>345,00 €</td>
+					<td>245,00 €</td>
+				</tr>
+				<tr>
+					<td>2h/semaine</td>
+					<td>490,00 €</td>
+					<td>1 050,00 €</td>
+					<td>690,00 €</td>
+					<td>490,00 €</td>
+				</tr>
+				<tr>
+					<td>3h/semaine</td>
+					<td>735,00 €</td>
+					<td>1 575,00 €</td>
+					<td>1 035,00 €</td>
+					<td>735,00 €</td>
+				</tr>
+				<tr>
+					<td>4h/semaine</td>
+					<td>980,00 €</td>
+					<td>2 100,00 €</td>
+					<td>1 380,00 €</td>
+					<td>980,00 €</td>
+				</tr>
+				<tr>
+					<td>5h/semaine</td>
+					<td>1 225,00 €</td>
+					<td>2 625,00 €</td>
+					<td>1 725,00 €</td>
+					<td>1 225,00 €</td>
+				</tr>
+				<tr>
+					<td>6h/semaine</td>
+					<td>1 470,00 €</td>
+					<td>3 150,00 €</td>
+					<td>2 070,00 €</td>
+					<td>1 470,00 €</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+	<!--Section pour créer de l'espace-->
+	<section id="clear"></section>
+	<!--Section contenant les informations de contact-->
+	<footer>
+		<div class="footer-content">
+			<div class="footer-section about">
+				<div class="contact">
+					<span><i class="fas fa-phone"></i> &nbsp;0469 69 69 69</span>
+					<span><i class="fas fa-envelope"></i> &nbsp;info@tennisclub.com </span>
+				</div>
+				<div class="socials">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			&copy; tennisclub.com | Created by Adriano Meledina / Exercices récapituatifs HTML/CSS
+		</div>
+	</footer>
+</body>
+</html>

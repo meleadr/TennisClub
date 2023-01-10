@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TennisClub</title>
+	<!--Link de mes icons-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!--Link de mon CSS-->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!--Link de mon favicon-->
+	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+	<!--Script pour ma navbar-->
+	<script src="assets/js/script.js"></script>
+</head>
+<body>
+	<!--Header contenant la navbar et le titre-->
+	<header>
+		<div class="logo">
+			<h1 class="logo-text"><a href="#home"><span>Tennis</span>Club</a></h1>
+		</div>
+		<i class="fa fa-bars menu-toggle" onclick="toggleMenu();"></i>
+		<ul class="nav active">
+			<li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Accueil</a></li>
+			<li><a href="#about" class="nav-link"><i class="fas fa-info"></i> A propos</a></li>
+			<li><a href="#services" class="nav-link"><i class="fas fa-check"></i> Services</a></li>
+			<li><a href="#contact" class="nav-link"><i class="fas fa-phone"></i> Contact</a></li>
+		</ul>
+	</header>
+	<!--Section contenant l'histoire du club-->
+	<section id="home">
+		<div class="section-content-left">
+			<h2>Le Tennis Club de la ville de Liege</h2>
+			<p>
+				Le Tennis Club de la ville de Liege est un club de tennis Belge fondé en 1900. Il est situé à Liège, en Belgique. Il est affilié à la Fédération royale belge de tennis (FRBT) et à la Fédération internationale de tennis (FIT).
+			</p>
+			<a href="#services" class="btn"><i class="fas fa-info"></i> En savoir plus</a>
+		</div>
+		<div class="section-content-right">
+			<img src="assets/img/tennis.jpeg" alt="Histoire">
+		</div>
+	</section>
+	<!--Section "A propos"-->
+	<section id="about">
+		<div class="section-content-left">
+			<img src="assets/img/tennis3.jpeg" alt="Pourquoi nous ?">
+		</div>
+		<div class="section-content-right">
+			<h2>Pourquoi nous choisir ?</h2>
+			<p>
+				Le Tennis Club de la ville de Liège est un club de tennis établi et reconnu dans la communauté depuis sa création en 1900. Il est affilié à la Fédération royale belge de tennis et à la Fédération internationale de tennis, ce qui garantit que les normes et les pratiques de l'industrie du tennis sont respectées. Situé à Liège, il est facilement accessible pour les personnes de la région. Le club dispose d'installations et d'équipements de qualité, et offre des cours et des entraînements de haut niveau avec des entraîneurs professionnels. En outre, il organise régulièrement des événements et des compétitions pour les membres intéressés par la compétition. Si vous cherchez un club de tennis de qualité à Liège, le Tennis Club de la ville de Liège est une excellente option.
+			</p>
+		</div>
+	</section>
+	<!--Section "Services"-->
+	<section id="services">
+		<div class="section-content-left">
+			<h2>Comment devenir membre ?</h2>
+			<p>
+				Pour devenir membre du Tennis Club de la ville de Liège, voici les étapes à suivre :
+			</p>
+				<ol>
+					<li>Visitez le site Web du club et accéder au <a href="become_member.html">formulaire d'inscription.</a></li>
+					<li>Remplissez le formulaire d'inscription en fournissant toutes les informations nécessaires, y compris vos coordonnées et votre niveau de jeu.</li>
+					<li>Envoyer ce formulaire.</li>
+					<li>Attendez la confirmation de votre adhésion.</li>
+				</ol>
+			<p>
+				Une fois votre adhésion approuvée, vous serez officiellement membre du club et pourrez profiter de tous les avantages offerts aux membres, tels que l'accès aux courts de tennis, aux entraînements et aux événements organisés par le club.
+			</p>
+			<a href="become_member.html" class="btn"><i class="fas fa-users"></i> Devenir membre</a>
+		</div>
+		<div class="section-content-right">
+			<img src="assets/img/tennis2.jpeg" alt="Comment devenir membre">
+		</div>
+	</section>
+	<!--Section "Contact" avec un formulaire de contact-->
+	<section id="contact">
+		<form action="https://www.w3schools.com/action_page.php" method="post">
+			<h2>Formulaire de contact</h2>
+			<input type="text" name="name" class="text-input contact-input" placeholder="Votre nom" required>
+			<input type="email" name="email" class="text-input contact-input" placeholder="Votre email" required>
+			<textarea name="message" class="text-input contact-input" placeholder="Votre message" required></textarea>
+			<button type="submit" name="submit" class="btn btn-big contact-btn">
+				<i class="fas fa-envelope"></i>
+				Envoyer
+			</button>
+		</form>
+	</section>
+	<!--Footer de la page contenant mes infos-->
+	<footer>
+		<div class="footer-content">
+			<div class="footer-section about">
+				<div class="contact">
+					<span><i class="fas fa-phone"></i> &nbsp;0469 69 69 69</span>
+					<span><i class="fas fa-envelope"></i> &nbsp;info@tennisclub.com </span>
+				</div>
+				<div class="socials">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			&copy; tennisclub.com | Created by Adriano Meledina / Exercices récapituatifs HTML/CSS
+		</div>
+	</footer>
+</body>
+</html>
